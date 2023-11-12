@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../css/navbar.css";
 // import HouseIcon from '@mui/icons-material/House';
 
@@ -12,9 +13,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           StellarSpace
-        </a>
+        </Link>
         <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleNavbar}>
           <div className="bar"></div>
           <div className="bar"></div>

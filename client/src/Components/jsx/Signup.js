@@ -1,4 +1,3 @@
-// SignUpPage.js
 import React, { useState } from 'react';
 import "../css/signup.css";
 

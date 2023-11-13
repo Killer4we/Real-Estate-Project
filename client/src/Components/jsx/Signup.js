@@ -20,15 +20,21 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Check if passwords match
+
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    try{
+      let filename = null;
+      const formData = new FormData();
+      filename = crypto.randomUUID()
+      formData.append("filename",filename);
+      alert("Signed Up Successfully");
+    }
+    catch(error){
+      alert("there was an error signing up");
+    }
   };
 
   return (

@@ -24,21 +24,21 @@ const Signin = () => {
   };
 
   return (
-    <Fragment>
-      <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
+    <div className="signin-container">
+      <form className="signin-form" onSubmit={handleSubmit}>
+        <h2>Sign Up</h2>
+        <label>
+          Username:
           <input
-            type="email"
-            name="email"
-            value={formData.email}
+            type="text"
+            name="username"
+            value={formData.username}
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div>
-          <label>Password:</label>
+        </label>
+        <label>
+          Password:
           <input
             type="password"
             name="password"
@@ -46,12 +46,12 @@ const Signin = () => {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <button type="submit">Sign In</button>
-        <small>New user?. Register here</small>
-        <Link to="/signup"><button>Create Account</button></Link>
+        </label>
+        <button type="submit">Log In</button>
+        <small>Don't have an Account?</small>
+        <Link to="/signup"><button>Create your Account</button></Link>
       </form>
-    </Fragment>
+    </div>
   );
 };
 

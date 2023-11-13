@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/navbar.css";
-// import HouseIcon from '@mui/icons-material/House';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,8 @@ const Navbar = () => {
           <li><a href="#section2">Add</a></li>
           <li><a href="#section3">View</a></li>
           <li><a href="#contact">Account</a></li>
-          {/* <li><a href="#contact">Projects</a></li> */}
+          <li><Link to="/signup">Sign Up</Link></li>
+          <li><Link to="/signin">Sign In</Link></li>
         </ul>
       </div>
     </nav>

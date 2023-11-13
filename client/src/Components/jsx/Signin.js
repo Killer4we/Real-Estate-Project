@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from "react-router-dom";
 import { Fragment } from 'react';
 import "../css/signin.css";
 const Signin = () => {
@@ -47,6 +48,8 @@ const Signin = () => {
           />
         </div>
         <button type="submit">Sign In</button>
+        <small>New user?. Register here</small>
+        <Link to="/signup"><button>Create Account</button></Link>
       </form>
     </Fragment>
   );

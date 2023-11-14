@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Navbar from "../Components/jsx/Navbar";
 import Footer from "../Components/jsx/Footer";
-// import Newsletter from "./jsx/Newsletter";
+import Newsletter from "./jsx/Newsletter";
 // import PopularProperties from "./jsx/PopularProperties";
 // import FeaturedProperties from "./jsx/FeaturedProperties";
 // This section is for home page
@@ -12,7 +12,7 @@ const HomeComp = () =>{
             <Navbar/>
             {/* <PopularProperties/> */}
             {/* <FeaturedProperties/> */}
-            {/* <Newsletter/> */}
+            <Newsletter/>
             <Footer/>
         </Fragment>
     );

@@ -1,39 +1,39 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom";
-import { Fragment } from 'react';
+import {Link, useNavigate} from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { login } from '../../redux/authSlice'
+import { request } from '../../util/fetchAPI'
 import "../css/signin.css";
 const Signin = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can add logic for authentication or API calls
-
-    console.log('Form Data:', formData);
-  };
+  const handleLogin = async(e) => {
+    e.preventDefault()
+    try {
+      const options = {
+        'Content-Type': 'application/json'
+      }
+      const data = await request('/auth/login', "POST", options, {email, password})
+      dispatch(login(data))
+      navigate("/")
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   return (
     <div className="signin-container">
-      <form className="signin-form" onSubmit={handleSubmit}>
+      <form className="signin-form" onSubmit={handleLogin}>
         <h2>Sign Up</h2>
         <label>
-          Username:
+          Email:
           <input
             type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleInputChange}
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
@@ -42,8 +42,7 @@ const Signin = () => {
           <input
             type="password"
             name="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>

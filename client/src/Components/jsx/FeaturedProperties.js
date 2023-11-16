@@ -1,6 +1,6 @@
 import { Fragment, useState,useEffect } from "react";
 import {Link} from "react-router-dom";
-import img from "../../public/titleimage2.jpeg";
+//import img from "../../public/titleimage2.jpeg";
 import {FaBed,FaSquareFull} from "react-icons/fa";
 import {request} from "../../util/fetchAPI";
 import "../css/featuredProperties.css";
@@ -31,7 +31,7 @@ function FeaturedProperties(){
                         {featuredProperties?.map((property)=>(
                             <div key={property.to_id} className="featuredProperty">
                                 <Link to={`/propertyDetail/${property._id}`} className="imgContainer" >
-                                    <img src={img} alt="random-image"/>
+                                    <img src={""} alt="random-image"/>
                                 </Link>
                                 <div className="details">
                                     <div className="priceAndOwner">

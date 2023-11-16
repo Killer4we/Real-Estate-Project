@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    min-height: 100vh; /* Ensure that the body covers at least the full height of the viewport */
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    /* padding-left: 100px; */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-column {
+    width: 30%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-column a:hover {
+    color: #ffa500; /* Change the color on hover (e.g., orange) */
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

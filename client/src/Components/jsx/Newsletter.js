@@ -26,10 +26,8 @@ const Newsletter = () => {
         <p>Subscribe to our newsletter for news and updates.</p>
       </div>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
+        <input type="text" name="user_name" placeholder='Name'/>
+        <input type="email" name="user_email" placeholder='Email'/>
         <input type="submit" value="Subscribe" />
         {subscribed && (
           <div className="thanks-message">

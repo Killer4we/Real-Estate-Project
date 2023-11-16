@@ -1,42 +1,37 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import "../css/signup.css";
+import { request } from '../../util/fetchAPI'
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
+  const [state, setState] = useState({})
+  //const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
+  const handleState = (e) => {
+    setState(prev => {
+      return {...prev, [e.target.name]: e.target.value}
+    })
+  }
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    try {
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+      const data = await request('/auth/register', 'POST', headers, { ...state });
+  
+      if (data.error) {
+        console.error('Error from server:', data.error); // Log the error message
+        window.alert('User already exists!'); // Show an alert to the user      this is not working!!!!
+      } else {
+        //dispatch(register(data))
+        navigate('/');
+      }
+    } catch (error) {
+      console.error(error)
     }
-    try{
-      let filename = null;
-      const formData = new FormData();
-      filename = crypto.randomUUID()
-      formData.append("filename",filename);
-      alert("Signed Up Successfully");
-    }
-    catch(error){
-      alert("there was an error signing up");
-    }
-  };
-
+  }
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
@@ -46,8 +41,7 @@ const Signup = () => {
           <input
             type="text"
             name="username"
-            value={formData.username}
-            onChange={handleChange}
+            onChange={handleState}
             required
           />
         </label>
@@ -56,8 +50,7 @@ const Signup = () => {
           <input
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            onChange={handleState}
             required
           />
         </label>
@@ -66,18 +59,7 @@ const Signup = () => {
           <input
             type="password"
             name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Re-enter Password:
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
+            onChange={handleState}
             required
           />
         </label>

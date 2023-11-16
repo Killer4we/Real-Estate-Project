@@ -1,6 +1,6 @@
 import { Fragment, useState,useEffect } from "react";
 import {Link} from "react-router-dom";
-// import img from "../../public/titleimage2.jpeg";
+import img from "../../public/titleimage2.jpeg";
 import {FaBed,FaSquareFull} from "react-icons/fa";
 import {request} from "../../util/fetchAPI";
 import "../css/featuredProperties.css";

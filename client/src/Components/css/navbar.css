@@ -17,7 +17,7 @@
 }
 
 ul li a:hover {
-  color: #ffd700;
+  color: #4c51af;
 }
 
 .navbar-container {
@@ -71,7 +71,7 @@ ul li a:hover {
 .nav-links a.signin,
 .nav-links li a.signup,
 .nav-links li a.signin {
-  background-color: #ffd700;
+  background-color: #4c51af;
   color: #333;
   padding: 10px 15px;
   border-radius: 5px;
@@ -80,6 +80,55 @@ small{
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.signinup {
+  display: flex;
+  align-items: center;
+}
+
+.signinup a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signinup a:hover {
+  color: #4c51af;
+}
+
+.signinup span {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.signinup .logout {
+  cursor: pointer;
+  color: #fff;
+  margin-right: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signinup .logout:hover {
+  color: #4c51af;
+}
+
+.signinup .addProp {
+  text-decoration: none;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signinup .addProp:hover {
+  background-color: #4c51af;
+  color: #333;
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -103,14 +152,14 @@ small{
 
   .nav-links a:hover,
   .nav-links a:focus {
-    color: #ffd700;
+    color: #4c51af;
   }
 
   .nav-links a.signup,
   .nav-links a.signin,
   .nav-links li a.signup,
   .nav-links li a.signin {
-    background-color: #ffd700;
+    background-color: #4c51af;
     color: #333;
     padding: 10px 15px;
     border-radius: 5px;

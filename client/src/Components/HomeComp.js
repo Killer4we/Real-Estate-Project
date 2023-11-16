@@ -11,8 +11,7 @@ const HomeComp = () =>{
     return(
         <Fragment>
             <Navbar/>
-            <HomePage/>
-            <PopularProperties/>
+            {/* <PopularProperties/> */}
             {/* <FeaturedProperties/> */}
             <Newsletter/>
             <Footer/>

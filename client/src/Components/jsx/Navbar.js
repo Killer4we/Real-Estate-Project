@@ -51,10 +51,10 @@ const Navbar = () => {
           <div className="bar"></div>
         </div>
         <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <li><a href="#section1">Properties</a></li>
-          <li><a href="#section2">Featured</a></li>
-          <li><a href="#section3">View</a></li>
-          <li><a href="#contact">Account</a></li>
+          <Link to = "/PopularProperties"><li><a href="">Properties</a></li></Link>
+          <Link to = "/FeaturedProperties"><li><a href="">Featured</a></li></Link>
+          {/* <li><a href="#section3">View</a></li> */}
+          {/* <li><a href="#contact">Account</a></li> */}
         </ul>
         <div className='signinup'>
           {
@@ -81,7 +81,7 @@ const Navbar = () => {
       id="listPropertyWrapper"
       onClick={(e) => e.stopPropagation()}
     >
-      <h2>List Property</h2>
+      <h2>Add Property</h2>
       <form onSubmit={handleListProperty}>
         <input
           value={state?.title}

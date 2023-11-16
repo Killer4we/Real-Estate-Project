@@ -82,7 +82,7 @@ const Signup = () => {
           />
         </label>
         <button type="submit">Sign Up</button>
-        <small>Already a user?</small>
+        <small><b>Already a user?</b></small>
         <Link to="/signin"><button>Login to your Account</button></Link>
       </form>
     </div>

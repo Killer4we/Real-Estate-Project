@@ -16,7 +16,6 @@ mongoose.connect('mongodb+srv://user123:user123@cluster0.oigcnso.mongodb.net/?re
   .catch(error => {
     console.error('Error connecting to MongoDB:', error);
   });
-
 //routes and middlewares
 app.use(cors())
 app.use(express.json())

@@ -2,6 +2,7 @@ import { Route,Routes} from "react-router-dom";
 import HomeComp from "./Components/HomeComp";
 import Signin from "./Components/jsx/Signin";
 import Signup from "./Components/jsx/Signup";
+import FeaturedProperties from "./Components/jsx/FeaturedProperties";
 // import PropertiesComp from './Components/PropertiesComp';
 // import AboutPropertiesComp from './Components/AboutPropertiesComp';
 function App() {
@@ -13,8 +14,10 @@ function App() {
       }/>     
         <Route path = "/signup" element = {<Signup/>}/>
         <Route path = "/signin" element = {<Signin/>}/>
+        <Route path="/featured" element = {<FeaturedProperties/>}/>
         {/* <Route path = "/aboutProperties" element = {<AboutPropertiesComp/>}/> */}
         {/* <Route path = "/Properties" element = {<PropertiesComp/>}/> */}
+        {/* <Route path="/userid" element = {<UpdatedNavbar/>}/> */}
       </Routes>
     </div>
     // <div>

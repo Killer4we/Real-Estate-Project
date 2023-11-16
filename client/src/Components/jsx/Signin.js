@@ -26,7 +26,7 @@ const Signin = () => {
   return (
     <div className="signin-container">
       <form className="signin-form" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
+        <h2>Login</h2>
         <label>
           Username:
           <input
@@ -48,7 +48,7 @@ const Signin = () => {
           />
         </label>
         <button type="submit">Log In</button>
-        <small>Don't have an Account?</small>
+        <small className='small'><b>Don't have an Account?</b></small>
         <Link to="/signup"><button>Create your Account</button></Link>
       </form>
     </div>

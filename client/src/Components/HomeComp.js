@@ -11,6 +11,7 @@ const HomeComp = () =>{
         <Fragment>
             <Navbar/>
             {/* <PopularProperties/> */}
+            {/* <div><h1>HELLO THERE</h1></div> */}
             {/* <FeaturedProperties/> */}
             {/* <Newsletter/> */}
             <Footer/>

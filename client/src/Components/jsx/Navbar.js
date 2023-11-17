@@ -3,13 +3,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import "../css/navbar.css";
 import { useDispatch, useSelector } from 'react-redux';
 import {logout} from '../../redux/authSlice'
+import { request } from '../../util/fetchAPI'
 import { AiOutlineClose, AiOutlineFileImage } from 'react-icons/ai'
 
 const Navbar = () => {
   const [showForm, setShowForm] = useState(false)
   const [state, setState] = useState({})
   const [photo, setPhoto] = useState("")
-  const {user} = useSelector((state) => state.auth)
+  const {user, token} = useSelector((state) => state.auth)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -35,8 +36,33 @@ const Navbar = () => {
     setState({})
   }
 
-  const handleListProperty = async(e) => {
+  const handleListProperty = async (e) => {
     e.preventDefault()
+    let filename = null
+    if (photo) {
+      const formData = new FormData()
+      filename = crypto.randomUUID() + photo.name
+      formData.append('filename', filename)
+      formData.append('image', photo)
+
+      await request("/upload/image", 'POST', {}, formData, true)
+    } else {
+      return
+    }
+    try {
+
+      const options = {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": 'application/json'
+      }
+
+      const data = await request("/property", 'POST', options, { ...state, img: filename })
+      console.log(data)
+      handleCloseForm()
+      //navigate(`/signin`) //propertyDetail/${newProperty._id}
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (

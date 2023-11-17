@@ -93,6 +93,8 @@ const Navbar = () => {
           <>
             <span>{user.username}</span>
             <Link onClick={() => setShowForm(true)} className='addProp'>Add</Link>
+            <Link onClick={() => setShowForm(true)} className='addProp'>Update</Link>
+            <Link onClick={() => setShowForm(true)} className='addProp'>Delete</Link>
             <span onClick={handleLogout} className='logout'>Log Out</span>
           </>
           }

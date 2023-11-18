@@ -15,7 +15,8 @@ function FeaturedProperties(){
                 console.error(error.message);
             }
         }
-        fetchFeatured()
+        fetchFeatured();
+        console.log(featuredProperties);
     },[])
     return (
         <Fragment>

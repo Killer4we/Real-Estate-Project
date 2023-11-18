@@ -4,7 +4,7 @@ import Footer from "../Components/jsx/Footer";
 import Newsletter from "./jsx/Newsletter";
 import HomePage from "./jsx/HomePage";
 import PopularProperties from "./jsx/PopularProperties";
-// import FeaturedProperties from "./jsx/FeaturedProperties";
+import FeaturedProperties from "./jsx/FeaturedProperties";
 // This section is for home page
 
 const HomeComp = () =>{
@@ -13,8 +13,7 @@ const HomeComp = () =>{
             <Navbar/>
             <HomePage/>
             <PopularProperties/>
-            
-            {/* <FeaturedProperties/> */}
+            <FeaturedProperties/>
             <Newsletter/>
             <Footer/>
         </Fragment>

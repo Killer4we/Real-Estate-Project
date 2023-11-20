@@ -5,6 +5,7 @@ import Signup from "./Components/jsx/Signup";
 import FeaturedPropertiesComp from "./Components/FeaturedPropertiesComp";
 import PropertiesComp from './Components/PropertiesComp';
 // import AboutPropertiesComp from './Components/AboutPropertiesComp';
+import AdduserComp from "./Components/AdduserComp";
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
         <Route path = "/signin" element = {<Signin/>}/>
         <Route path="/FeaturedProperties" element = {<FeaturedPropertiesComp/>}/>
         <Route path = "/PopularProperties" element = {<PropertiesComp/>}/>
+        <Route path = "/addproperty" element = {<AdduserComp/>}/>
       </Routes>
     </div>
    

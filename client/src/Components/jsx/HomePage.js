@@ -23,9 +23,9 @@ const MainPage = () => {
       <div className="search-bar">
       <select className="dropdown" onChange={(e) => setType(e.target.value)}>
         <option disabled>Select type</option>
-          <option value="Mountain">Mountain</option>
-          <option value="Beach">Beach</option>
-          <option value="Village">Village</option>
+          <option value="mountain">Mountain</option>
+          <option value="beach">Beach</option>
+          <option value="village">Village</option>
         </select>
         <select className="dropdown" onChange={(e) => setPriceRange(e.target.value)}>
             <option disabled>Select Price Range</option>

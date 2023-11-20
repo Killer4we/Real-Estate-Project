@@ -92,7 +92,7 @@ const Navbar = () => {
           : 
           <>
             <span>{user.username}</span>
-            <Link onClick={() => setShowForm(true)} className='addProp'>Add</Link>
+            <Link to = "/addproperty" onClick={() => setShowForm(true)} className='addProp'>Add</Link>
             <Link onClick={() => setShowForm(true)} className='addProp'>Update</Link>
             <Link onClick={() => setShowForm(true)} className='addProp'>Delete</Link>
             <span onClick={handleLogout} className='logout'>Log Out</span>
@@ -157,7 +157,7 @@ const Navbar = () => {
           value={state?.beds}
           type="number"
           placeholder="Beds"
-          name="beds"
+          name="bed"
           step={1}
           min={1}
           onChange={handleState}

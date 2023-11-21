@@ -2,6 +2,7 @@
 import React from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {Link} from "react-router-dom";
 import '../css/homePage.css';
 
 const MainPage = () => {
@@ -44,7 +45,7 @@ const MainPage = () => {
             <option value="4">North America</option>
             <option value="5">Oceania</option>
         </select>
-        <button className="search-button" onClick={handleSearch}>Search</button>
+        <Link to = "/property" ><button className="search-button" onClick={handleSearch}>Search</button></Link>
       </div>
       <div class="overlay">
       <div className="background-image">

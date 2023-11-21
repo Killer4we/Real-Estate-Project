@@ -6,7 +6,7 @@ function Footer(){
             <footer>
                 <div class="footer-column" id="about">
                 <h4>About the Website</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos tempore ab commodi fuga consequatur amet dicta omnis nemo doloremque, odio et voluptatem delectus molestias tenetur esse nesciunt? Magni, odio illum.</p>
+                <p>Hello guys. It is a real estate website where you can buy and view properties online.</p>
                 </div>
                 
                 <div class="footer-column" id="contacts">

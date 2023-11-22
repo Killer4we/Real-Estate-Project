@@ -17,7 +17,11 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch(logout())
     navigate('/')
+    alert('Return to Home Page');
   }
+  // const handleFinalLogout = () =>{
+  //   handleLogout();
+  // }
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {

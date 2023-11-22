@@ -142,6 +142,7 @@ body {
     cursor: pointer;
   }  
 
+
   .contactOwner,
 .submit-btn {
   background-color: #4c51af;
@@ -155,4 +156,8 @@ body {
 .contactOwner:hover,
 .submit-btn:hover {
   background-color: #070a38; /* Change the background color on hover */
+}
+
+.delete{
+  background-color: red;
 }

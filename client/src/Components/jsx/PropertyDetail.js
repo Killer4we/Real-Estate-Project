@@ -68,7 +68,7 @@ const PropertyDetail = () => {
             {user?._id === propertyDetail?.currentOwner?._id && (
               <div className='controls'>
                 <Link to={`/updateProperty/${id}`}>Update</Link>
-                <button onClick={handleDelete}>Delete</button>
+                <button className='delete' onClick={handleDelete}>Delete</button>
               </div>)
             }
           </h3>

@@ -39,8 +39,8 @@ function FeaturedProperties(){
                                         <span className="price">${property?.price}</span>
                                     </div>
                                     <div className="moreDetails">
-                                        <span>{property?.beds} beds<FaBed className = "icon"/></span>
-                                        <span>{property?.sqmeter} square meters<FaSquareFull className = "icon"/></span>
+                                        <span>{property?.bed} beds<FaBed className = "icon"/></span>
+                                        <span>{property?.sqmeters} square meters<FaSquareFull className = "icon"/></span>
                                     </div>
                                     <div className="desc">
                                         {property?.desc}

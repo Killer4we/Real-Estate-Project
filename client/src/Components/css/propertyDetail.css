@@ -1,0 +1,158 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 60px auto 60px; /* Adjust top and bottom margin based on your navbar and footer heights */
+    position: relative;
+    z-index: 1;
+    background-color: #f8f8f8; /* Adjust background color as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper {
+    display: flex;
+    margin-right: 60px;
+  }
+  
+  .left {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .right {
+    flex: 2;
+  }
+  
+  /* Styles for property details */
+  .title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .details {
+    margin-bottom: 20px;
+  }
+  
+  .typeAndContinent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .priceAndOwner {
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .moreDetails {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .icon {
+    margin-left: 5px;
+  }
+  
+  .desc {
+    margin-bottom: 20px;
+  }
+  
+  .contactOwner {
+    background-color: #4c51af;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Styles for contact form */
+  .contactForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure this is higher than the container */
+  }
+  
+  .contactFormWrapper {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactForm h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .contactForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #4c51af;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Styling for .controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  /* Styling for .controls > a */
+  .controls a {
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    font-size: 16px;
+    background-color: green;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Styling for .controls > button */
+  .controls button {
+    outline: none;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    font-size: 16px;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }  
+
+  .contactOwner,
+.submit-btn {
+  background-color: #4c51af;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Add transition for a smooth hover effect */
+}
+
+.contactOwner:hover,
+.submit-btn:hover {
+  background-color: #070a38; /* Change the background color on hover */
+}

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {logout} from '../../redux/authSlice'
 import { request } from '../../util/fetchAPI'
 import { AiOutlineClose, AiOutlineFileImage } from 'react-icons/ai'
+// import HouseIcon from '@mui/icons-material/House'
 
 const Navbar = () => {
   const [showForm, setShowForm] = useState(false)
@@ -68,6 +69,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+      {/* <HouseIcon /> */}
         <Link to="/" className="logo">
           StellarSpace
         </Link>
@@ -93,8 +95,6 @@ const Navbar = () => {
           <>
             <span>{user.username}</span>
             <Link to = "/addproperty" onClick={() => setShowForm(true)} className='addProp'>Add</Link>
-            <Link onClick={() => setShowForm(true)} className='addProp'>Update</Link>
-            <Link onClick={() => setShowForm(true)} className='addProp'>Delete</Link>
             <span onClick={handleLogout} className='logout'>Log Out</span>
           </>
           }

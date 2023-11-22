@@ -1,0 +1,58 @@
+/* YourComponent.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .options select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .searchBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4c51af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .searchBtn:hover {
+    background-color: #070a38;
+  }
+  
+  .titles {
+    margin-top: 20px;
+  }
+  
+  .properties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .noProperty {
+    margin-top: 20px;
+    color: red;
+  }
+  

@@ -3,14 +3,17 @@ const propertyController = require('express').Router()
 const verifyToken = require("../middlewares/verifyToken")
 
 //get all
-propertyController.get('/getAll', async(req, res) => {
+propertyController.get('/getAll', async (req, res) => {
     try {
-        const properties = await Property.find({})
-        return res.status(200).json(properties)
+        console.log("Fetching all properties...");
+        const properties = await Property.find({}).populate("currentOwner", '-password')
+        console.log("Properties fetched successfully:", properties);
+        return res.status(200).json(properties);
     } catch (error) {
-        return res.status(500).json(error.message)
+        console.error("Error fetching properties:", error.message);
+        return res.status(500).json(error.message);
     }
-})
+});
 
 //get featured
 propertyController.get('/find/featured', async(req, res) => {

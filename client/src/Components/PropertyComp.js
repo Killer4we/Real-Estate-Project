@@ -6,10 +6,7 @@ function PropertyComp(){
     return (
         <Fragment>
             <Navbar/>
-            {/* <Properties/> */}
-            <div>
-                Hi This is Abhinav Tomar
-            </div>
+            <Properties/>
             <Footer/>
         </Fragment>
     );

@@ -2,7 +2,6 @@
 import React from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {Link} from "react-router-dom";
 import '../css/homePage.css';
 
 const MainPage = () => {
@@ -11,10 +10,10 @@ const MainPage = () => {
   const [priceRange, setPriceRange] = useState("0")
   const navigate = useNavigate()
 
-  const handleSearch = () => {
-    // navigating to properties
-    navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`)
-  }
+    const handleSearch = () => {
+
+    navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`);
+  };
   return (
     <div className="main-page">
       <div className="quote">
@@ -45,7 +44,7 @@ const MainPage = () => {
             <option value="4">North America</option>
             <option value="5">Oceania</option>
         </select>
-        <Link to = "/property" ><button className="search-button" onClick={handleSearch}>Search</button></Link>
+        <button className="search-button" onClick={handleSearch}>Search</button>
       </div>
       <div class="overlay">
       <div className="background-image">

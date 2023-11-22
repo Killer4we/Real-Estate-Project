@@ -15,7 +15,7 @@ authController.post('/register', async (req, res) => {
         const newUser = await User.create({...req.body, password: hashedPassword})
         //...req.body == email: req.body.email, username: req.body.username
         const {password, ...others} = newUser._doc
-        const token = jwt.sign({id: newUser._id}, process.env.JWT_SECRET, {expiresIn: '8d'})
+        const token = jwt.sign({id: newUser._id}, 'secret123', {expiresIn: '8d'})
         return res.status(201).json({others, token})
     } catch (error){
         return res.status(500).json(error.message)
@@ -33,7 +33,7 @@ authController.post('/login', async(req, res) => {
         if (!comparePass){
             throw new Error("Wrong credentials")
         }
-        const token = jwt.sign({id: user._id}, process.env.JWT_SECRET, {expiresIn: '8d'})
+        const token = jwt.sign({id: user._id}, 'secret123', {expiresIn: '8d'})
         const {password, ...others} = user._doc
         return res.status(200).json({others, token})
     } catch(error){

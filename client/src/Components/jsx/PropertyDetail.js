@@ -59,7 +59,7 @@ const PropertyDetail = () => {
       <div className="wrapper">
         <div className="left">
           {propertyDetail && (
-              <img src={`http://localhost:5000/images/${propertyDetail?.img}`} />
+              <img className='imgg' src={`http://localhost:5000/images/${propertyDetail?.img}`} />
           )}
         </div>
         <div className="right">

@@ -42,6 +42,7 @@ const PropertyDetail = () => {
     emailjs.sendForm('service_bc94kbe', 'template_q10xplb', formRef.current, '4yXeJZOqig0kxqEVF')
     .then((result) => console.log(result))
     .catch((err) => console.error(err));
+    setShowForm(false);
   
   }
 
@@ -102,7 +103,7 @@ const PropertyDetail = () => {
                 <input type="text" name="from_name" placeholder='Name'/>
                 <input type="email" name="from_email" placeholder='Email'/>
                 <input type="text" name="message" placeholder='Message'/>
-                <input className='submit-btn' type="submit" value="Contact Us" onClick={handleCloseForm}/>
+                <input className='submit-btn' type="submit" value="Contact Us" />
               </form>
             </div>
           </div>
